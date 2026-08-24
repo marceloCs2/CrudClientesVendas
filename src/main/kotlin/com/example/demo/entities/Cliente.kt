@@ -48,18 +48,3 @@ class Cliente {
     @Column(name = "data_cadastro")
     open var dataCadastro: LocalDate? = null
 }
-
-
-//// VALIDAÇÕES - Poderia fazer com o init do próprio kotlin
-// {
-//    init {
-//        require(!nome.isNullOrBlank()) { "Nome é obrigatório" }
-//        require(!cpfCnpj.isNullOrBlank()) { "CPF/CNPJ é obrigatório" }
-//        require(cpfCnpj!!.matches(Regex("\\d{11}|\\d{14}"))) {
-//            "CPF/CNPJ deve conter 11 (CPF) ou 14 (CNPJ) dígitos numéricos"
-//        }
-//        require(!tipo.isNullOrBlank()) { "Tipo é obrigatório" }
-//        require(!email.isNullOrBlank() && email!!.contains("@")) { "E-mail inválido" }
-//        require(!cidade.isNullOrBlank()) { "Cidade é obrigatória" }
-//    }
-//}
