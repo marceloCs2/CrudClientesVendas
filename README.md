@@ -2,9 +2,7 @@
 
 API RESTful desenvolvida em **Kotlin** com **Spring Boot**, para gerenciamento de cadastro de clientes e registro de vendas, com persistência em **PostgreSQL**.
 
-Projeto desenvolvido como desafio prático de um programa de estágio (Trilha Técnica), com foco em arquitetura em camadas, validação de dados, tratamento global de exceções e consultas customizadas.
-
-## 🚀 Tecnologias
+##Tecnologias
 
 - **Kotlin**
 - **Spring Boot**
@@ -13,7 +11,7 @@ Projeto desenvolvido como desafio prático de um programa de estágio (Trilha T�
 - **PostgreSQL**
 - **Gradle**
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 com.example.demo/
@@ -41,7 +39,7 @@ A aplicação segue uma arquitetura em camadas:
 - **Repository** → interface com o banco de dados (via Spring Data JPA)
 - **Entity** → representa as tabelas do banco
 
-## ⚙️ Configuração
+## Configuração
 
 ### Pré-requisitos
 
@@ -72,7 +70,7 @@ O Hibernate cria/atualiza as tabelas automaticamente (`ddl-auto=update`) na prim
 
 A API sobe em `http://localhost:8080`.
 
-## 📌 Endpoints
+## Endpoints
 
 ### Clientes
 
@@ -119,13 +117,13 @@ A API sobe em `http://localhost:8080`.
 }
 ```
 
-## ✅ Validações
+## Validações
 
 - Campos obrigatórios validados via Bean Validation (`@NotBlank`, `@NotNull`, `@Email`, `@Pattern`)
 - CPF/CNPJ validado por formato (11 ou 14 dígitos numéricos) e checado quanto a duplicidade antes de salvar
 - Venda validada quanto à existência do `clienteId` informado antes de ser criada
 
-## ⚠️ Tratamento de erros
+## Tratamento de erros
 
 A API possui um tratamento global de exceções (`@RestControllerAdvice`), retornando respostas de erro padronizadas em JSON:
 
@@ -149,6 +147,3 @@ A API possui um tratamento global de exceções (`@RestControllerAdvice`), retor
 | Conflito de regra de negócio (ex: CPF duplicado) | `409 Conflict` |
 | Erro inesperado | `500 Internal Server Error` |
 
-## 📄 Licença
-
-Projeto de estudo, desenvolvido para fins educacionais.
